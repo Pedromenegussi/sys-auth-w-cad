@@ -24,7 +24,6 @@ urlpatterns = [
     url(r'^pessoa_list',            views.pessoa_lista,                  name='pessoa_list'),
     url(r'^editar/(?P<pk>[0-9]+)',  views.pessoa_edit,                   name='pessoa_edit'),
     url(r'^delete/(?P<pk>[0-9]+)',  views.pessoa_delete,                 name='pessoa_delete'),
-    path('login/',                  views.login_user,                    name='login'),
-    path('login/submit',            views.pessoa_login,                  name='login/submit'),
+    path('login/',                  views.pessoa_login,                  name='login'),
     path('auth/',                   views.acesso,                         name='acesso'),
 ]
