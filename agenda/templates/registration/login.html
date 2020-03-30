@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Login user</title>
+</head>
+<body>
+<div style="padding: 100px 400px 100px 400px">
+    <hr style="border-color: #7bac3b"/>
+    {% block content %}
+
+    {% if form.errors %}
+      <p>Seu usuário e senha estão inválidos</p>
+    {% endif %}
+    
+    {% if next %}
+    {% endif %}
+    {% if user.is_authenticated %}
+          <p>olá</p>
+    <form action="{% url 'login' %}"  method="post">
+        {% csrf_token %}
+
+            <h2 class="form-signin-heading">LOGIN</h2>
+                <label for="usuario">Usuário:</label>
+                    <input type="text" class="form-control" id="usuario" placeholder="E-mail" name="username" size="10">
+                <label for="senha">Senha:</label>
+                    <input type="password" class="form-control" id="senha" placeholder="Senha" name="password">
+                <button type="submit" class="btn btn-primary">Entrar</button>
+
+                    <!-- botao cadastro -->
+
+                    <a>
+                        <button type="" class="btn btn-primary">
+                            cadastro
+                        </button>
+                      </a>
+    </form>
+    {% endif %}
+    <hr style="border-color: #7bac3b"/>
+    {% endblock %}
+
+</div>
+</body>
+
+</html>

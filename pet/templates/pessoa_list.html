@@ -1,0 +1,50 @@
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<h1 class="h1">Lista de Contatos</h1>
+<hr>
+{% for pessoa in lista %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id: </th>
+            <th>Nome: </th>
+            <th>Sobrenome: </th>
+            <th>Data de nascimento: </th>
+            <th>Email: </th>
+            <th>Usuário: </th>
+            <th>Senha: </th>
+        </tr>
+    </thead>
+<tbody>
+    <tr>
+        <td>{{pessoa.id}}</td>
+        <td>{{pessoa.nome}}</td>
+        <td>{{pessoa.sobrenome}}</td>
+        <td>{{pessoa.nascimento}}</td>
+        <td>{{pessoa.email}}</td>
+        <td>{{pessoa.usuario}}</td>
+        <td>{{pessoa.senha}}</td>
+        <td>
+            <a href="{% url 'pessoa_edit' pessoa.pk %}">
+                <span class="glyphicon glyphicon-pencil"></span>
+            </a>
+            <a href="{% url 'pessoa_delete' pessoa.pk %}">
+                <span class="glyphicon glyphicon-trash"></span>
+            </a>          
+        </td>
+    </tr>
+
+</tbody>
+</table>
+{% endfor %}
+
+<a href="{% url 'pessoa_new' %}">
+<button type="submit" class="btn btn-primary">
+Cadastrar
+</button>
+</a>
+</html>
