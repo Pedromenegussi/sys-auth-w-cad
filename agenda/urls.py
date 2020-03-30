@@ -22,7 +22,7 @@ from django.contrib import admin
 
 
 urlpatterns = [
-    url(r'^$',        views.index),
+    path('',        include('pet.urls')),
     path('admin/',                  admin.site.urls                                         ),
     path('accounts/', include('django.contrib.auth.urls')                                   ),
 ]

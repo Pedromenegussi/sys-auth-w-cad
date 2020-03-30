@@ -21,7 +21,7 @@ from django.contrib import admin
 
 urlpatterns = [
     path('',    views.index, name='index'),
-    path('accounts/logout', views.logout, name='logout'),
-    path('accounts/', include('django.contrib.auth.urls'), name='conta'),
+    path('painel_adm', views.painel_adm, name='painel.html'),
+
 ]
 

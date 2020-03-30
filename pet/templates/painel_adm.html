@@ -7,15 +7,14 @@
     <title>Cadastrar Contato</title>
 </head>
 <body>
+
         <h1 style="padding:1px 370px">Cadastrar Contato</h1>
-                <form  style="padding: 1px 400px 1px 400px" method="post">
-                    {% csrf_token %}
-                    {{ form.as_p }}
+                <form  style="padding: 1px 400px 1px 400px" method="">
                     <button type="submit" class="btn btn-primary">
                         Salvar
                     </button>
 
-                    <a href="{% url 'login' %}">
+                    <a href="">
                     <button type="button" class="btn btn-primary">
                             Login
                     </button>
