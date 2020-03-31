@@ -16,12 +16,12 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.urls import path
 from pet import views
+from agenda import urls
 from django.contrib import admin
 
 
 urlpatterns = [
-    path('',    views.index, name='index'),
-    path('painel_adm', views.painel_adm, name='painel.html'),
-
+    path('',    views.login, name='login'),
+    path('index', views.index, name='index'),
 ]
 

@@ -55,7 +55,7 @@ ROOT_URLCONF = 'agenda.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'agenda/templates')],
+        'DIRS': [os.path.join(BASE_DIR  , 'agenda/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -126,7 +126,7 @@ STATIC_URL = '/static/'
 
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
 
-LOGIN_REDIRECT_URL = '/painel_adm'
+LOGIN_REDIRECT_URL = '/index'
 
 LOGOUT_REDIRECT_URL = '/'
 
