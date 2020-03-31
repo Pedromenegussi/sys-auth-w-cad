@@ -1,11 +1,11 @@
 from django.shortcuts import render, redirect
 from .models import *
 from django import forms
-from django.contrib.auth import login, logout
+from django.contrib.auth import login, logout 
 from django.contrib.auth.decorators import login_required
 from . import models
 import requests
-import agenda.templates
+import website
 
 class ClienteForm(forms.ModelForm):
     class Meta:
@@ -26,5 +26,4 @@ def index(request, template_name='index.html'):
         if form.is_valid():
             form.save()
     return render(request, template_name, context)
-
 
